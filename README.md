@@ -1,5 +1,5 @@
 # Cloud Application
-Implements a REST API using proper resource based URLs, pagination, status codes, and user authorization.
+Implements a REST API using proper resource based URLs, pagination, status codes, and user authentication/authorization.
 
 # Application Requirements:
 

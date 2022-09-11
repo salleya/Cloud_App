@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio Assignment: Final Project</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    {% if session %}
+    <h1>Welcome {{session.userinfo.name}}!</h1>
+    <p><a href="/logout">Logout</a></p>
+    <p>Here is your JWT issued by Auth0: {{ session.id_token }}</p>
+    <p>Here is your unique User ID: {{ session.userinfo.sub }}</p>
+    {% else %}
+    <h1>Welcome Guest</h1>
+    <p><a href="/login">Login / Authorize</a></p>
+    {% endif %}
+  </body>
+</html>
